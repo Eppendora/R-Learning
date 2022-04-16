@@ -103,6 +103,17 @@ save.image()
 require()
 # 加载包（eg. require(vcd)）
 
+
+help(package = "vegan")
+library(help = "vegan")
+#查看R包帮助信息
+
+ls("package:vegan")
+#列出包中涉及的所有函数
+
+data(package = "vegan")
+#列出包中涉及所有数据集
+
 detach() # eg. detach("package:vcd")
 remove.packages() # eg. remove.packages("vcd")
 # 去除包
