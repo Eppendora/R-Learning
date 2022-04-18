@@ -69,27 +69,20 @@ mean()
 
 ls()
 # 列出所有变量
-
 ls.str()
 # 列出所有变量的详细信息
-
 str()
 # 括号里填写变量名，输出变量的信息
-
 rm()
 # 清除某个变量
-
 rm(list = ls())
 # 消除所有变量
 
 history()
 # 唤出历史。加数字时，如history(25)表示前25条命令
 
-save.image()
-# 保存工作空间（图片不会自动保存）
-
 # R拓展包安装
-# - 在线
+#  -在线 通过Rstdio直接安装
 #   通过访问镜像站点
 #   拓展包的名字都需要被引号
     install.package()
@@ -102,6 +95,8 @@ save.image()
 
 require()
 # 加载包（eg. require(vcd)）
+library()
+# 加载包（eg. library(vcd)）
 
 
 help(package = "vegan")
@@ -128,14 +123,17 @@ save(Rpack, file = "Rpack.Rdata") # 保存文件
 # 新设备
 for (i in Rpact) install.packages(i)
 
+# help(函数名)
 # ?函数名（一个问号查函数）eg. ?mean
-# ??函数名（两个问好查拓展包）eg. ??heatmap
+# ??函数名（两个问号查拓展包）eg. ??heatmap
+# args(plots) (快速查询函数参数，而不打开帮助文档) 
 
 apropos(关键字)
-# 查询括号内的关键字
+# 本地查询括号内的关键字
 
 RSiteSearch("关键字")
-# 在R网址查询关键字 rseek.org
+# 在R网址查询关键字 
+# rseek.org
 
 # R -> 大数据 -> 批量化、自动化
 # Excel -> 鼠标操作方便
@@ -180,9 +178,9 @@ data(数据集名称, package = "包名")
         # > x * z + y
         #   8 11 14 17 20
     # - 使用c()来控制循环的次数
-        # > x <- c(1, 2, 3, 4, 5)
-        # > rep(x, c(2, 4, 1, 1, 3))
-        #   1 1 2 2 2 2 3 4 5 5 5
+        #  x <- c(1, 2, 3, 4, 5)
+        #  rep(x, c(2, 4, 1, 1, 3))
+        #  1 1 2 2 2 2 3 4 5 5 5
     # - 向量索引
         length(数组) # 数组数量
         数组[位置] # 输出数组某个向量
@@ -204,9 +202,10 @@ data(数据集名称, package = "包名")
         ceiling() # 向上取整
         floor() # 向下取整
         trunc() # 向量内取整
+        Which() # 函数可以返回索引值，也就是元素所在的位置
         
         # 四舍五入
-        round(向量, digits = 保留小数点位数)
+        round(向量, digit s = 保留小数点位数)
         signif(向量, digits = 总保留位数)
         
         # 三角函数
